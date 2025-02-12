@@ -9,9 +9,9 @@ from Rectangle import Rectangle
 pygame.init()
 # Defining the screen width/height
 SCREEN_WIDTH = 800
-SCREEN_HEGIHT = 600 
+SCREEN_HEIGHT = 600 
 # Saving the screen to a variable
-screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_WIDTH))
+screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
 
 # DELETE AFTER YOU UNDERSTAND HOW IT WORKS
 # -----
@@ -36,10 +36,10 @@ while not game_over:
     # Uncomment them to try them out
     # -----
     # You can update the position by the following!
-    # x_circle_pos, y_circle_pos = circle.get_position()
-    # x_rect_pos, y_rect_pos = rectangle.get_position()
-    # circle.set_position(x_circle_pos + 1, y_circle_pos + 1)
-    # rectangle.set_position(x_rect_pos + 1, y_rect_pos)
+    x_circle_pos, y_circle_pos = circle.get_position()
+    x_rect_pos, y_rect_pos = rectangle.get_position()
+    circle.set_position(x_circle_pos + 1, y_circle_pos + 1)
+    rectangle.set_position(x_rect_pos + 1, y_rect_pos)
     
     # If you want to change the color
     # circle.set_color("red")

@@ -40,7 +40,7 @@ class Circle:
     def set_radius(self, radius):
         '''Sets the radius of the circle'''
         self._radius = radius
-        self._surface = pygame.Surface(2 * radius, 2 * radius)
+        self._surface = pygame.Surface((2 * radius, 2 * radius))
         self._update()
 
     def set_color(self, color):
