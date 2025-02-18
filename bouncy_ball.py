@@ -12,7 +12,8 @@ SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600 
 # Saving the screen to a variable
 screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
-
+# Defining a clock to ensure smooth behavior
+clock = pygame.time.Clock()
 
 circle = Circle("white", 10)
 
@@ -60,4 +61,7 @@ while not game_over:
     # Displaying to the screen
     # Showing what you've drawn on the scren
     pygame.display.flip()
+    
+    # Setting the framerate to 60 fps
+    clock.tick(60)
 pygame.quit() 

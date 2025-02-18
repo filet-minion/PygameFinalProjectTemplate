@@ -41,12 +41,12 @@ class Rectangle:
     def set_width(self, width):
         '''Sets the width of the rectangle'''
         self._width = width
-        self._surface = pygame.Surface(self._width, self._height)
+        self._surface = pygame.Surface((self._width, self._height))
         self._update()
     def set_height(self, height):
         '''Sets the height of the rectangle'''
         self._height = height
-        self._surface = pygame.Surface(self._width, self._height)
+        self._surface = pygame.Surface((self._width, self._height))
         self._update()
 
     def set_size(self, width, height):
