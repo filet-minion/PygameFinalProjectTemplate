@@ -4,7 +4,7 @@ import pygame
 # These are 2 libraries I have written to make drawing simple shapes easier.
 from Circle import Circle
 from Rectangle import Rectangle
-
+from helper import check_if_colliding
 # Initializing the pygame modules
 pygame.init()
 # Defining the screen width/height
