@@ -2,6 +2,9 @@ import pygame
 # An abstraction to make a rectangle easier to draw
 class Rectangle:
     def __init__(self, color, width, height, x_pos=0, y_pos=0):
+        '''Creates the rectangle object, with the particular color, width, height, x position and y position.
+        X position and y position are optional. If no x and y position are given it will default to
+        0, 0.'''
         # Creating the surface to draw on
         self._surface = pygame.Surface((width, height))
         self._width = width
@@ -60,6 +63,11 @@ class Rectangle:
         self._surface.fill(color)
         self._update()
 
+    def move(self, x_offset, y_offset):
+        '''This takes the rectangles current location and shifts it by x_offset, y_offset. To use this
+        simply do rectangle_variable_name.move(1, 1)'''
+        self.x += x_offset
+        self.y += y_offset
     
     def _update(self):
         self._surface.fill(self._color)
