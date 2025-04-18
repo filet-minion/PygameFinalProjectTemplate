@@ -4,8 +4,9 @@ import pygame
 class Circle:
     def __init__(self, color, radius, x_pos=0, y_pos=0):
         # Creating the surface to draw on
-        self._surface = pygame.Surface((2 * radius, 2 * radius))
-        # Saving the radiuss
+        self._surface = pygame.Surface((2 * radius, 2 * radius), pygame.SRCALPHA)
+        self._surface = self._surface.convert_alpha()
+        # Saving the radius
         self._radius = radius
         # Saving the color
         self._color = color
@@ -40,7 +41,6 @@ class Circle:
     def set_radius(self, radius):
         '''Sets the radius of the circle'''
         self._radius = radius
-        self._surface = pygame.Surface((2 * radius, 2 * radius))
         self._update()
 
     def set_color(self, color):
@@ -50,4 +50,6 @@ class Circle:
 
     
     def _update(self):
+        self._surface = pygame.Surface((2 * self._radius, 2 * self._radius), pygame.SRCALPHA)
+        self._surface = self._surface.convert_alpha()
         pygame.draw.circle(self._surface, self._color, (self._radius, self._radius), self._radius)

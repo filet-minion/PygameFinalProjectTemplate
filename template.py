@@ -54,7 +54,7 @@ while not game_over:
 
 
     # Clearing the screen
-    screen.fill("black")
+    screen.fill("blue")
 
     # DELETE THE CODE IN BETWEEN ---- AFTER YOU UNDERSTAND WHAT IT MEANS
     # -----
