@@ -3,6 +3,9 @@ import pygame
 
 class Circle:
     def __init__(self, color, radius, x_pos=0, y_pos=0):
+        '''Creates the circle object, with the particular color, radius, x position and y position.
+        X position and y position are optional. If no x and y position are given it will default to
+        0, 0.'''
         # Creating the surface to draw on
         self._surface = pygame.Surface((2 * radius, 2 * radius), pygame.SRCALPHA)
         self._surface = self._surface.convert_alpha()
@@ -48,6 +51,11 @@ class Circle:
         self._color = color
         self._update()
 
+    def move(self, x_offset, y_offset):
+        '''This takes the circles current location and shifts it by x_offset, y_offset. To use this
+        simply do circle_variable_name.move(1, 1)'''
+        self.x += x_offset
+        self.y += y_offset
     
     def _update(self):
         self._surface = pygame.Surface((2 * self._radius, 2 * self._radius), pygame.SRCALPHA)
