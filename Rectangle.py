@@ -33,7 +33,7 @@ class Rectangle:
 
     def get_position(self):
         '''Returns the objects x and y coordinates in the form (x, y). To use this write a statement like:
-        x, y = circle_variable_name.get_position()'''
+        x, y = rect_variable_name.get_position()'''
         return (self.x, self.y)
     # Setters
     def set_position(self, x, y):
