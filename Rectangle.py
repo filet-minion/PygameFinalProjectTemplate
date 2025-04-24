@@ -1,5 +1,6 @@
 import pygame
 # An abstraction to make a rectangle easier to draw
+pygame.init()
 class Rectangle:
     def __init__(self, color, width, height, x_pos=0, y_pos=0):
         '''Creates the rectangle object, with the particular color, width, height, x position and y position.
@@ -18,6 +19,7 @@ class Rectangle:
     def get_width(self):
         '''Returns the objects width as a float.'''
         return self. _width
+
     def get_height(self):
         '''Returns the objects height as a float.'''
         return self. _height

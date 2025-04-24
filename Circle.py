@@ -1,6 +1,6 @@
 import pygame
 # An abstraction to make a circle easier to draw
-
+pygame.init()
 class Circle:
     def __init__(self, color, radius, x_pos=0, y_pos=0):
         '''Creates the circle object, with the particular color, radius, x position and y position.
